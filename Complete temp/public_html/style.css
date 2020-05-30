@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 27, 2020, 1:07:47 PM
+    Author     : acer
+*/
+.content{
+    min-height: 600px;
+}
+.B_image{
+    padding-top: 75px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(res/intro-bg_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+#b_con{
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 660px;
+}
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0;
+    position: absolute;
+}
+.top{
+    margin-top: 60px;
+}
+body{
+    padding-bottom: 20px;
+    position: relative;
+    min-height: 100vh;
+    font-family: Bahnschrift;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: red;
+}
