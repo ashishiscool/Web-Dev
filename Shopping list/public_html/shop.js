@@ -6,7 +6,11 @@ function createList(){
         var li=document.createElement("li");
         li.appendChild(document.createTextNode(input.value));
         ul.appendChild(li);
-        input.value="";    
+        input.value="";
+        var btn=document.createElement("button");
+        btn.appendChild(document.createTextNode("Delete"));
+        li.appendChild(btn);
+        btn.onclick=removeParent;
 }
 
 button.addEventListener("click",function(){
