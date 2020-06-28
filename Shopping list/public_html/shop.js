@@ -4,9 +4,10 @@ var ul=document.querySelector("ul");
 
 function createList(){
         var li=document.createElement("li");
-        li.appendChild(document.createTextNode(input.value));
+        
+        li.appendChild(document.createTextNode(input.value+"  "));
         ul.appendChild(li);
-        input.value="";
+        input.value="";   
         var btn=document.createElement("button");
         btn.appendChild(document.createTextNode("Delete"));
         li.appendChild(btn);
@@ -24,7 +25,9 @@ input.addEventListener("keypress",function(event){
         createList();
      }
 })
-
+function removeParent(evt){
+    evt.target.parentNode.remove();
+}
 ul.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('done');
