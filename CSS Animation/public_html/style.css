@@ -1,0 +1,51 @@
+body{
+  text-align:center;
+  background-color:greenyellow;
+}
+.heading{
+  color:red;
+  font-family:Gadugi;
+  font-size:20px;
+}
+.shapes{
+  display:flex;
+  justify-content:center;
+  
+  font-family:Impact;
+}
+.circle{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 200px;
+  width:200px;
+  background-color:black;
+  border-radius: 200px;
+  margin:10px 30px;
+  transition:1s ease;
+}
+.c1:hover{
+  background-color:orange;
+  transform:rotateZ(360deg);
+  color:white;
+  border: 2px white solid;
+}
+.c2:hover{
+  color:white;
+  background-color:red;
+  transform:translateY(200px);
+  border: 2px white solid;
+}
+.c3:hover{
+  color:white;
+  background-color:lightblue;
+  transform:scale(0.5);
+  border: 2px white solid;
+  font-size:2em;
+}
+.c4:hover{
+  color:white;
+  background-color:purple;
+  transform:skew(10deg,10deg);
+  border: 2px white solid;
+}
