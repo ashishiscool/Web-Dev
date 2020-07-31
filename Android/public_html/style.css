@@ -1,37 +1,33 @@
-
-h1 {
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
-
 .robots {
-    
+    margin:100px 0 0 0;
 }
-
+.lear,.rear,
 .head, 
 .left_arm, 
 .torso, 
 .right_arm, 
 .left_leg, 
 .right_leg {
-	 background-color: #5f93e8;
+	 background-color: #a4c639;
 }
-
+.ears{
+  
+}
 .head { 
 	width: 200px; 
 	margin: 0 auto; 
-	height: 150px; 
+	height: 100px; 
 	border-radius: 200px 200px 0 0; 
 	margin-bottom: 10px;
 } 
 
 .eyes {
 	
-}
-
-.head:hover {
-	width: 300px;
-    transition: 1s ease-in-out;
 }
 
 .upper_body { 
@@ -62,11 +58,8 @@ h1 {
 	border-radius: 0 0 50px 50px; 
 } 
 
-.lower_body {
-        
-	 
+.lower_body { 
 	height: 200px;
-	/* This is another useful property. Hmm what do you think it does?*/
 	display: flex;
         justify-content: center;
 } 
@@ -81,13 +74,7 @@ h1 {
 	 
 } 
 
-.left_leg:hover {
-	-webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    transform: rotate(20deg);
-}
+
 
 .right_leg { 
 	margin-left: 30px; 
@@ -101,16 +88,52 @@ h1 {
 } 
 
 .left_eye { 
-	/* These properties are new and you haven't encountered
-	in this course. Check out CSS Tricks to see what it does! */
+	
 	position: relative; 
-	top: 100px; 
+	top: -100px; 
 	left: 40px; 
+  animation:up-blink 3s both infinite;
+  
 } 
 
 .right_eye { 
 	position: relative; 
-	top: 80px; 
+	top: -120px; 
 	left: 140px;
-        
+  animation:up-blink 3s both infinite;     
+}
+.lear,.rear{
+  width:4px;
+  height:80px;
+  border-radius:4px;
+}
+.lear{
+  position:relative;
+  top:-30px;
+  left:50px;
+  transform:rotate(-30deg);
+  animation:lear-anim 3s both ease infinite;
+}
+.rear{
+  position:relative;
+  top:-110px;
+  left:150px;
+  transform:rotate(30deg);
+  animation:rear-anim 3s both ease infinite;
+}
+@keyframes lear-anim{
+  0%{transform:rotate(-20deg);}
+  50%{transform:rotate(-40deg);}
+  100%{transform:rotate(-20deg)}
+}
+@keyframes rear-anim{
+  0%{transform:rotate(40deg);}
+  50%{transform:rotate(20deg);}
+  100%{transform:rotate(40deg)}
+}
+@keyframes up-blink{
+  0%{transform:rotateX(0deg)}
+  12.5%{transform:rotateX(90deg)}
+  25%{transform:rotateX(0deg)}
+  100%{transform:rotateX(0deg)}
 }
